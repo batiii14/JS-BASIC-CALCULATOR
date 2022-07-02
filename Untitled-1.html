@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.6">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    
+    <br><br>
+    <form action="">
+        
+        FIRST VALUE: <input type="text" id="fvalue" /><br><br>
+        <select name="clc" id="clc">
+            <option value="+">+</option>
+            <option value="*">*</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+        </select><br><br>
+        SECOND VALUE: <input type="text" id="svalue" /><br><br>
+        <input type="button"  value="=" onclick="disp();"></button><br><br>
+        RESULT: <input type="text" id="output" disabled readonly><br><br>
+        
+
+    </form>
+
+</center>
+
+<script>
+    function disp(){
+        var fv= parseInt(document.getElementById("fvalue").value);
+        var sv=parseInt(document.getElementById("svalue").value);
+        var clc=document.getElementById("clc").value;
+        var otp=0;
+        if(clc=="+"){
+            otp=(fv+sv);
+
+            
+        }else if (clc=="-"){
+            otp=(fv-sv);
+        }else if (clc=="*"){
+            otp=(fv*sv);
+        }else{
+            otp=(fv/sv);
+        }
+
+        document.getElementById("output").value =otp;
+    }
+   
+</script>
+</body>
+
+
+</html>
